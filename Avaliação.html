@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!--Uma declaração para informar ao navegador qual é a versão do HTML utilizada no arquivo-->
+<html lang="pt-BR"> <!-- definir o idioma de um elemento: a língua em que elementos não-editáveis são escritos, 
+ou a língua em que elementos editáveis devem ser escritos pelo usuário.-->
+<head> <!-- providencia informações gerais sobre o documento, incluindo seu título e links para scripts e folhas de estilos-->
+    <meta charset="UTF-8"> <!--META - define qualquer informação de metadados que não podem ser definidos por outros elementos HTML. 
+    ( <base> , <link> , <script> , <style> ou <title> ). Conteúdo de metadado.--> <!--CHARSET="UTF-8" - uma tag meta utilizada para 
+    comunicar ao navegador qual é o formato de codificação de caracteres-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--HTTP-EQUIV-controlar as ações do browser e também especificam melhor 
+    as informações--> <!--"X-UA-COMPATIBLE"-Dar suporte a aplicações que só funcionavam 
+    nas versões mais antigas do IE--> <!--CONTENT = "IE=EDGE" - diz para o IE renderizar aquela página com a versão 
+    mais recente que ele tiver-->  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--NAME=VIEWPORT - O viewport é a área onde seu website aparece. 
+    É a área branca da janela quando você abre o browser.--> <!--CONTENT="WIDTH=DEVICE-WIDTH, INITIAL-SCALE=1.0" -Define o viewport 
+    com a largura do dispositivo. initial-scale=1 define o nível de zoom inicial quando o usuário visita a página. -->
+    <title>Avaliação</title> <!--Título da página-->
+    <link rel="stylesheet" href="Avaliação.css">  <!--Esse atributo define 
+    o relacionamento entre o arquivo em que o comando está escrito e o arquivo que é definido no caminho do href-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body> <!--Corpo que guarda o conteúdo documento HTML-->
+
+    <main> <!--Define o conteúdo principal dentro do CORPO em seu documento ou aplicação-->
+        <div id="moviePoster"> <!--DIV- é um container genérico para conteúdo de fluxo, que de certa forma não representa nada. Ele é útil 
+        para agrupar elementos para fins de estilos (usando class ou id), ou porque eles compartilham valores de atributos.-->
+            <div class="omdbrating">
+                <span id="icone"><i class="fa-solid fa-star"></i></span> <!--CLASS ICON - Para inserir um ícone, 
+                você pode adicionar o nome da classe do ícone a qualquer elemento-->
+
+                <span id="imdbRating">Score</span> <!--SPAN- é um conteiner generico em 
+                linha para conteúdo fraseado-->
+            </div>
+        </div>
+
+        <div class="description">
+
+            <form id="formSearch" action=""> <!--FORM - É o elemento que formalmente define o formulário 
+            e os atributos que definem a maneira como esse formulário se comporta.-->
+                <input id="title" type="text" placeholder="Informe o título do filme"> <!-- INPUT - usado para criar controles interativos para 
+                formulários baseados na web para receber dados do usuário.-->
+                <input type="submit" value="Pesquisar">
+            </form>
+            <div id="descriptionBodyNotFound">
+            </div>
+            <div id="descriptionBody">
+                <h1 id="movieTitle">Titulo do filme</h1> <!--A tag H1 é a mais importante da página e deve ser atribuída ao título 
+                principal do conteúdo.-->
+                <p><span class="infoBlue" id="movieYear">ANO</span> <span id="movieGenre">GENERO DO FILME</span> <span
+                        class="infoBlue" id="movieRuntime">DURAÇÃO</span></p>
+                <p id="movieInfo">Descrição do filme.</p> <!--P - representa um Parágrafo-->
+                <p><strong id = "remover1" >Escrito por:</strong> <span id="movieWriter">Nome do escritor</span> </p>  <!--STRONG - Dá ao texto uma forte 
+                importância, e é tipicamente mostrado em negrito-->
+                <p><strong id = "remover2" >Dirigido por:</strong> <span id="movieDirector">Nome do ditetor</span></p>
+            </div>
+
+            
+        </div>
+    </main>
+
+    <script src="Avaliação.js"></script> <!--Conecta com o arquivo Avaliação.js-->
+</body>
+
+</html>

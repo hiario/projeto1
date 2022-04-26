@@ -1,0 +1,171 @@
+/* importando a fonte Roboto do google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
+
+/* resetando os espaços de margin e padding, além de mudar o tamanho dos elementos para border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*utilizada para alterar a propriedade padrão da box model, usada para calcular larguras */
+}
+/* Conteudo central do site */
+main {
+    width: 100%;  /*determina a largura da área de conteúdo de um elemento*/
+    height: 100vh; /* Altura com toda a área visivel*/
+    display: flex; /*especifica o tipo de caixa de renderização usada por um elemento*/
+    color: #CAB9B9; /* Cor das informações do filme*/ 
+    position: fixed; /* posicionamento dos elementos na página.*/
+    font-family: 'Roboto', sans-serif; /*Permite que se faça uma lista de prioridades de familias de fontes e/ou 
+    nomes genéricos de famílias a serem especificados para um elemento selecionado*/
+    font-size: 28px; /*é usada para indicar o tamanho da letra(fonte) em CSS. Este tamanho poderá ser especificado 
+    em várias unidades de medidas*/
+}
+
+#moviePoster {
+    width: 50%;
+    height: 100%;
+    /* background: url(filme.png) no-repeat center; */
+    /* background-size: cover; */
+    position: relative;
+
+    background-image: url(filme.png); /*define uma imagem de fundo */
+    background-repeat: no-repeat; /*define a maneira como a imagem de fundo é posicionada*/
+    background-position: center; /*define como e onde a imagem de fundo é posicionada*/
+    background-size: cover; /*especifica o tamanho das imagens de fundo*/
+}
+
+.omdbrating {
+    position: absolute;
+    width: 315.47px;
+    height: 70.49px;
+    
+    left: -90px; /*Esta propriedade descreve a borda esquerda de elementos.*/
+    bottom: 0; /*definir a posição vertical do elemento em relação a sua borda inferior.*/
+
+    padding-left: 90px; /*define o espaço de preenchimento no lado esquerdo de um elemento*/
+    padding-top: 10px; /*indica qual o espaçamento superior no elemento.*/
+
+    background: #217C8F; /*cor da faixa que tem a estrela*/
+    transform: rotate(47.42deg); /*define uma transformação que gira um elemento em torno de um ponto fixo no plano 2D*/
+
+    padding-top: 15px;
+}
+
+#icone {
+    color: #F6C516;
+}
+
+#imdbRating {
+    color: #F4F4F4;
+}
+
+.description {
+    width: 50%;
+    background: #390F0F; /*valores de fundo individuais em um único lugar na folha de estilo.*/
+    box-shadow: inset 0px 0px 120px #090808; /*adicionar efeitos de sombra em volta de um elemento*/
+    padding: 60px 50px; /*define uma a distância entre o conteúdo de um elemento e suas bordas*/
+    
+    z-index: 2; /*permite estabelecer valores negativos para posicionar um elemento na tela*/
+}
+
+#movieTitle {
+    color: #D6D6D6;
+    font-size: 38px;
+    margin-bottom: 30px; /*margem do botão*/
+}
+
+#movieInfo {
+    margin: 25px 0;
+}
+
+#movieWriter {
+    margin-bottom: 25px;
+}
+
+.infoBlue {
+    color: #217C8F;
+    font-weight: bold; /*especifica o peso ou a intensidade da fonte (ex.: negrito)*/
+}
+
+#movieGenre{
+    margin: 0 20px;
+}
+
+
+/* form */
+
+#formSearch {
+    margin-bottom: 30px;
+}
+#formSearch input[type='text'] {
+    background-color: #411111;
+    padding: 10px 20px;
+    color:  #F4F4F4;
+    font-size: 22px;
+    border: 4px solid #217C8F;
+    border-radius: 10px; /*destina-se a definir bordas arredondadas*/
+    margin-right: 10px; /*distância do elemento para o elemento conseguinte*/
+}
+
+#formSearch input[type='text']:focus{
+    outline: none;
+    border: 4px solid #F4F4F4;
+}
+
+#formSearch input[type='submit'] {
+    padding: 15px 20px;
+    background-color: #217C8F;
+    color:  #F4F4F4;
+    border-radius: 10px;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+#formSearch input[type='submit']:hover {
+    background-color: #F4F4F4;
+    color:    #217C8F;
+    transition: 0.3s;
+}
+
+
+
+
+
+/* responsivo para celular */
+
+@media (max-width: 700px) {
+
+    main {
+        position: static;
+        display: block;
+        font-size: 18px;
+        /* height: 100%; */
+    }
+
+    #movieTitle {
+        font-size: 24px;
+    }
+
+    #moviePoster {
+        height: 65%;
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+        position: relative;
+        z-index: 3;
+        padding: 8%;
+    }
+
+    #formSearch input[type='text'], #formSearch input[type='submit'] {
+        font-size: 18px;
+        width: 100%;
+    }
+
+  
+}
